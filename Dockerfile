@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     software-properties-common \
     python-software-properties \
     curl \
+    git \
     apt-utils \
 	&& apt-get clean \
 	&& rm -fr /var/lib/apt/lists/*
@@ -36,6 +37,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install -g bower
+RUN npm install -g bower-npm-resolver
 
 # Install composer for PHP dependencies
 RUN cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
