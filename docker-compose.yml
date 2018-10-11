@@ -18,7 +18,7 @@ services:
   site:
     depends_on:
       - db
-    image: epsa:latest
+    image: registry.gitlab.com/asnawisaharuddin/epsa-docker:latest
     volumes:
       - /Users/asnawisaharuddin/projects/epsa:/var/www/html
     entrypoint:
